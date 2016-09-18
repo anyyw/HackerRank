@@ -16,14 +16,15 @@ public class Solution {
             arr.add(in.nextInt());
         }
 
-        HashMap<ArrayList<Integer>, Integer> h = new Solution.powerSet(arr);
+        HashMap<ArrayList<Integer>, Integer> h = new Solution().powerSet(arr);
+        System.out.println(h);
 
     }
 
     public HashMap<ArrayList<Integer>, Integer> powerSet(ArrayList<Integer> oldSet) {
-        HashMap<ArrayList<Integer>, Integer> h = new HashMap<ArrayList<Integer>, Integer>;
+        HashMap<ArrayList<Integer>, Integer> h = new HashMap<ArrayList<Integer>, Integer>();
         if (oldSet.isEmpty()) {
-            h.put(new ArrayList<Integer>(), 0)
+            h.put(new ArrayList<Integer>(), 0);
             return h;
         }
         ArrayList<Integer> list = oldSet;
