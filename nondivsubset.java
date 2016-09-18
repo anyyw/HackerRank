@@ -17,7 +17,17 @@ public class Solution {
         }
 
         HashMap<ArrayList<Integer>, Integer> h = new Solution().powerSet(arr);
-        System.out.println(h);
+        int largestArray = 0;
+        Iterator it = h.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+            if((int)pair.getValue() % k == 0) {
+                if (((ArrayList)pair.getKey()).size() > largestArray) {
+                    largestArray = ((ArrayList)pair.getKey()).size();
+                }
+            }
+        }
+        System.out.println(largestArray);
 
     }
 
